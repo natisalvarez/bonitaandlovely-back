@@ -1,0 +1,1110 @@
+[
+  {
+    "name": "Labial en Matte Latte Go",
+    "descripcion": "Labial de larga duración y acabado mate",
+    "precio_compra": 879,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 900,
+    "referencia_proveedor": "REF123",
+    "marcaId": 15,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 6,
+    "subcategoriaId": [ 12, 9, 19, 16 ],
+    "imagenes":[""],
+    "imagenPrincipal":"https://i.ibb.co/KmPvyR6/img2025.jpg"
+  },
+  {
+    "name": "Paleta de Sombras Here 4",
+    "descripcion": "Paleta de sombras con tonos brillantes y mate",
+    "precio_compra": 780,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 792,
+    "referencia_proveedor": "REF456",
+    "marcaId": 8,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 6,
+    "subcategoriaId": [ 8, 17, 3, 5 ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/9bQVmbS/img1643.jpg"
+  },
+  {
+    "name": "Mascara Transparente MYK",
+    "descripcion": "Mascara de pestañas que proporciona volumen intenso",
+    "precio_compra": 331,
+    "porcentaje_ganancia": 50,
+    "precio_venta": 610,
+    "referencia_proveedor": "REF789",
+    "marcaId": 20,
+    "categoriaId": 1,
+    "tamañoId": 1,
+    "proveedorId": 6,
+    "subcategoriaId": [ 6, 7, 2 ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/Xs1QVKk/img3037.jpg"
+  },
+  {
+    "name": "Base Liquida Flawless",
+    "descripcion": "Base de maquillaje de alta cobertura y larga duración",
+    "precio_compra": 174,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 495,
+    "referencia_proveedor": "REF246",
+    "marcaId": 12,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 2,
+    "subcategoriaId": [ 12, 19, 9, 16 ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/vj7NFgy/img2565.jpg"
+  },
+  {
+    "name": "Delineador Liquido Charming Karite",
+    "descripcion": "Delineador líquido con punta precisa para un acabado perfecto",
+    "precio_compra": 461,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 708,
+    "referencia_proveedor": "REF753",
+    "marcaId": 5,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 2,
+    "subcategoriaId": [ 10, 2, 7 ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/x39m1Hc/img2774.jpg"
+  },
+  {
+    "name": "Rubor Mineralizado MYK",
+    "descripcion": "Rubor en polvo con tonos suaves y naturales",
+    "precio_compra": 282,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 647,
+    "referencia_proveedor": "REF902",
+    "marcaId": 10,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 2,
+    "subcategoriaId": [ 1, 8, 17 ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/fkzxx98/img1893.jpg"
+  },
+  {
+    "name": "Kit de Brochas Glam",
+    "descripcion": "Set de brochas profesionales para maquillaje",
+    "precio_compra": 752,
+    "porcentaje_ganancia": 60,
+    "precio_venta": 871,
+    "referencia_proveedor": "REF342",
+    "marcaId": 18,
+    "categoriaId": 3,
+    "tamañoId": 1,
+    "proveedorId": 4,
+    "subcategoriaId": [ 16, 12, 19, 9 ],
+    "imagenes":["https://i.ibb.co/cXz9VD0/img1541.jpg", "https://i.ibb.co/Gsfp8tF/img1543.jpg", "https://i.ibb.co/YN2CFDG/img1545.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/4NmTBqp/setbrochas-compressed.jpg"
+  },
+  {
+    "name": "Velvet Color Kiss Beauty",
+    "descripcion": "Labial líquido de acabado mate y larga duración",
+    "precio_compra": 844,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 845,
+    "referencia_proveedor": "REF657",
+    "marcaId": 9,
+    "categoriaId": 1,
+    "tamañoId": 1,
+    "proveedorId": 6,
+    "subcategoriaId": [
+      10,
+      13
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/MZbtk7F/img2040.jpg"
+  },
+  {
+    "name": "Sombra The Natural Ushas",
+    "descripcion": "Sombra de ojos de alta pigmentación",
+    "precio_compra": 51,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 116,
+    "referencia_proveedor": "REF123",
+    "marcaId": 23,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      3,
+      1
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/QbC9JD7/img1837.jpg"
+  },
+  {
+    "name": "Polvo compacto",
+    "descripcion": "Polvo compacto de alto cubrimiento",
+    "precio_compra": 256,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 423,
+    "referencia_proveedor": "REF567",
+    "marcaId": 6,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      16,
+      9,
+      19,
+      12
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/Fx2dGmC/img2753.jpg"
+  },
+  {
+    "name": "Pestañas Foxy Engol",
+    "descripcion": "Pestañas ideales para dar el efecto foxy eyes en el ojo",
+    "precio_compra": 265,
+    "porcentaje_ganancia": 50,
+    "precio_venta": 414,
+    "referencia_proveedor": "REF124",
+    "marcaId": 13,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      14,
+      2,
+      13
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/NmNSGwH/img3071.jpg"
+  },
+  {
+    "name": "Delineador en Glitter",
+    "descripcion": "Delineador en glitter de larga duración",
+    "precio_compra": 587,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 723,
+    "referencia_proveedor": "REF347",
+    "marcaId": 17,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      18,
+      8,
+      17,
+      5
+    ],
+    "imagenes":["https://i.ibb.co/0QHT4mW/img2842.jpg", "https://i.ibb.co/xC7qv2s/img2844.jpg"]
+  },
+  {
+    "name": "Corrector Profesional Trendy Magic Concealer",
+    "descripcion": "Corrector de alta cobertura y excelente calidad",
+    "precio_compra": 625,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 679,
+    "referencia_proveedor": "REF789",
+    "marcaId": 11,
+    "categoriaId": 1,
+    "tamañoId": 1,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      12,
+      19,
+      9
+    ],
+    "imagenes":["https://i.ibb.co/KzpPQGD/img2681.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/fD0bWBk/img2675.jpg"
+  },
+  {
+    "name": "Labial Liquido Super Stay Matte Ink Kiss Beauty",
+    "descripcion": "Labial liquido de alta duración",
+    "precio_compra": 494,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 724,
+    "referencia_proveedor": "REF432",
+    "marcaId": 2,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 6,
+    "subcategoriaId": [
+      2,
+      14
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/kBZWvBK/img2240.jpg"
+  },
+  {
+    "name": "Iluminador Liquido Shinny Febble",
+    "descripcion": "Iluminador líquido para resaltar los rasgos faciales",
+    "precio_compra": 141,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 656,
+    "referencia_proveedor": "REF243",
+    "marcaId": 25,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 5,
+    "subcategoriaId": [
+      18,
+      17
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/2hxC1yP/img1908.jpg"
+  },
+  {
+    "name": "Mascara MYK",
+    "descripcion": "Mascara de pestañas color negro",
+    "precio_compra": 22,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 597,
+    "referencia_proveedor": "REF542",
+    "marcaId": 4,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 6,
+    "subcategoriaId": [
+      2,
+      14,
+      7,
+      6
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/S7xTXqg/img3062.jpg"
+  },
+  {
+    "name": "Brocha Mágica Viral",
+    "descripcion": "Brocha para aplicar base de maquillaje líquida",
+    "precio_compra": 140,
+    "porcentaje_ganancia": 60,
+    "precio_venta": 182,
+    "referencia_proveedor": "REF873",
+    "marcaId": 21,
+    "categoriaId": 3,
+    "tamañoId": 3,
+    "proveedorId": 5,
+    "subcategoriaId": [
+      19,
+      16
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/R6pjnSD/img1561.jpg"
+  },
+  {
+    "name": "Bálsamo Labial",
+    "descripcion": "Bálsamo sin color",
+    "precio_compra": 609,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 676,
+    "referencia_proveedor": "REF625",
+    "marcaId": 7,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      2,
+      14,
+      13
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/yFgyKWs/img2138.jpg"
+  },
+  {
+    "name": "Kit x5 Brochas de Ojos y Rostro Diamantado RB",
+    "descripcion": "Set de brochas para maquillaje de ojos y ojos",
+    "precio_compra": 331,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 361,
+    "referencia_proveedor": "REF671",
+    "marcaId": 19,
+    "categoriaId": 3,
+    "tamañoId": 1,
+    "proveedorId": 6,
+    "subcategoriaId": [
+      8,
+      17,
+      5,
+      1
+    ],
+    "imagenes":["https://i.ibb.co/72xCzsW/img1567.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/ThGsmGX/img1569.jpg"
+  },
+  {
+    "name": "Spray Fijador Last Step Miis Cosmetics",
+    "descripcion": "Spray fijador de maquillaje para una larga duración",
+    "precio_compra": 345,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 851,
+    "referencia_proveedor": "REF238",
+    "marcaId": 1,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 6,
+    "subcategoriaId": [
+      12,
+      16,
+      19,
+      9
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/47HKRVp/img842.jpg"
+  },
+  {
+    "name": "Sombra Galletica Hojo",
+    "descripcion": "Sombra de ojos de excelente pigmentación",
+    "precio_compra": 548,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 745,
+    "referencia_proveedor": "REF465",
+    "marcaId": 14,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      4,
+      3,
+      18,
+      8
+    ],
+    "imagenes":["https://i.ibb.co/cvXCHRz/img1670.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/b6jNZ7r/img1667.jpg"
+  },
+  {
+    "name": "Labial Velvet Diamante Aereney",
+    "descripcion": "Labial de gran duración",
+    "precio_compra": 489,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 788,
+    "referencia_proveedor": "REF832",
+    "marcaId": 3,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      10,
+      6
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/RvptWkP/img2166.jpg"
+  },
+  {
+    "name": "Delineador en Plumón Blanco Kiss Beauty",
+    "descripcion": "Delineador en plumón para trazos precisos",
+    "precio_compra": 522,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 573,
+    "referencia_proveedor": "REF104",
+    "marcaId": 16,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      17,
+      5
+    ],
+    "imagenes":["https://i.ibb.co/kcDJmbJ/img2832.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/Bf4N4q2/img2827.jpg"
+  },
+  {
+    "name": "Trio de Esponjas Fruticas",
+    "descripcion": "Set de esponjas para aplicar maquillaje",
+    "precio_compra": 740,
+    "porcentaje_ganancia": 50,
+    "precio_venta": 830,
+    "referencia_proveedor": "REF429",
+    "marcaId": 22,
+    "categoriaId": 3,
+    "tamañoId": 1,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      9,
+      16,
+      19
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/kctRgF9/img1491.jpg"
+  },
+  {
+    "name": "Labial Filo Dorado Chanlevii",
+    "descripcion": "Labial en Barra",
+    "precio_compra": 484,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 869,
+    "referencia_proveedor": "REF567",
+    "marcaId": 24,
+    "categoriaId": 1,
+    "tamañoId": 1,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      13,
+      7,
+      6
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/NCff1tR/img2068.jpga"
+  },
+  {
+    "name": "Gel Fijador de Cejas MYK",
+    "descripcion": "Gel fijador de cejas que da forma y volumen",
+    "precio_compra": 810,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 838,
+    "referencia_proveedor": "REF897",
+    "marcaId": 9,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 5,
+    "subcategoriaId": [
+      8,
+      1,
+      18,
+      3
+    ],
+    "imagenes":["https://i.ibb.co/Xb4PD0p/img3059.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/fNfg0nH/img3054.jpg"
+  },
+  {
+    "name": "Brocha Raimbow",
+    "descripcion": "Brocha para polvo",
+    "precio_compra": 172,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 567,
+    "referencia_proveedor": "REF321",
+    "marcaId": 7,
+    "categoriaId": 3,
+    "tamañoId": 3,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      16,
+      12,
+      19
+    ],
+    "imagenes":["https://i.ibb.co/JzcPhg7/img1577.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/RYsN8LF/img1575.jpg"
+  },
+  {
+    "name": "Labial Matte",
+    "descripcion": "Labial matte con efecto voluminizante karite",
+    "precio_compra": 211,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 549,
+    "referencia_proveedor": "REF903",
+    "marcaId": 5,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      10,
+      2
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/xYLRtNh/img2179.jpg"
+  },
+  {
+    "name": "Delineador Líquido Colores",
+    "descripcion": "Delineador en pincel liner waterproof",
+    "precio_compra": 253,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 308,
+    "referencia_proveedor": "REF239",
+    "marcaId": 18,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      4,
+      1
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/tLS5CKK/img2804.jpg"
+  },
+  {
+    "name": "Kit Maquillaje Chicas Pesadas",
+    "descripcion": "Kit de maquillaje 4 paletas",
+    "precio_compra": 277,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 830,
+    "referencia_proveedor": "REF984",
+    "marcaId": 13,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      12,
+      9,
+      16
+    ],
+    "imagenes":["https://i.ibb.co/9qZsWM4/img1877.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/mRnMKVT/img1884.jpg"
+  },
+  {
+    "name": "Lápiz Delineador Cremoso Engol",
+    "descripcion": "Lápices cremosos para labios y ojos engol",
+    "precio_compra": 35,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 54,
+    "referencia_proveedor": "REF672",
+    "marcaId": 11,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      15,
+      7,
+      10
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/4SQ1TNX/img2914.jpg"
+  },
+  {
+    "name": "Kit Ruby Face",
+    "descripcion": "Kit de 8 brochas + cosmetiquera",
+    "precio_compra": 633,
+    "porcentaje_ganancia": 50,
+    "precio_venta": 886,
+    "referencia_proveedor": "REF953",
+    "marcaId": 25,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      5,
+      17,
+      18
+    ],
+    "imagenes":["https://i.ibb.co/J5wWG5Z/img1550.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/q1c60G4/img1548.jpg"
+  },
+  {
+    "name": "Labial Lip Stick Chanlevii",
+    "descripcion": "Labial en barra Velvet",
+    "precio_compra": 293,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 689,
+    "referencia_proveedor": "REF789",
+    "marcaId": 16,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      9,
+      16,
+      12
+    ],
+    "imagenes":["https://i.ibb.co/zfw2SFM/img2189.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/0nm3Z5t/img2187.jpg"
+  },
+  {
+    "name": "Brocha Ruby Face",
+    "descripcion": "Brocha para rubor con mango.",
+    "precio_compra": 568,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 659,
+    "referencia_proveedor": "REF672",
+    "marcaId": 12,
+    "categoriaId": 3,
+    "tamañoId": 4,
+    "proveedorId": 5,
+    "subcategoriaId": [
+      2,
+      15
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/3CPnmTf/img1594.jpg"
+  },
+  {
+    "name": "Delineador Iman of Nobble",
+    "descripcion": "Delineador perlado glitter plumon",
+    "precio_compra": 895,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 900,
+    "referencia_proveedor": "REF537",
+    "marcaId": 10,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      3,
+      8
+    ],
+    "imagenes":["https://i.ibb.co/5ckDLwf/img2966.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/8Mv0cK7/img2964.jpg"
+  },
+  {
+    "name": "Paleta de sombras Naughty",
+    "descripcion": "Paletea de 18 colores.",
+    "precio_compra": 282,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 463,
+    "referencia_proveedor": "REF402",
+    "marcaId": 23,
+    "categoriaId": 1,
+    "tamañoId": 1,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      19,
+      9
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/SxBnP0R/img1831.jpg"
+  },
+  {
+    "name": "Esponja Cajita Oso",
+    "descripcion": "Esponjas x 4 unidades",
+    "precio_compra": 47,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 833,
+    "referencia_proveedor": "REF753",
+    "marcaId": 4,
+    "categoriaId": 3,
+    "tamañoId": 3,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      6,
+      14,
+      10,
+      11
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/JKBHmYL/img863.jpg"
+  },
+  {
+    "name": "Set de brochas para ojos",
+    "descripcion": "Brochas para ojos x12 unidades color Beige/negro.",
+    "precio_compra": 704,
+    "porcentaje_ganancia": 60,
+    "precio_venta": 815,
+    "referencia_proveedor": "REF129",
+    "marcaId": 20,
+    "categoriaId": 3,
+    "tamañoId": 2,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      4,
+      1,
+      17
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/m6KQp54/img1572.jpg"
+  },
+  {
+    "name": "Lapiz de Labios HDBeauty",
+    "descripcion": "Labial de larga duración.",
+    "precio_compra": 783,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 840,
+    "referencia_proveedor": "REF674",
+    "marcaId": 17,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      19,
+      12,
+      9,
+      16
+    ],
+    "imagenes":["https://i.ibb.co/vxBBzN5/img2351.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/hHHzSTp/img2347.jpg"
+  },
+  {
+    "name": "Serum Balance&Control Moonshine by Ame",
+    "descripcion": "Mejora su apariencia, reduciendo los poros y controlando el exceso de grasa sin resecar. Contiene Niaciamida al 3% y centella asiática.",
+    "precio_compra": 734,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 835,
+    "referencia_proveedor": "REF318",
+    "marcaId": 21,
+    "categoriaId": 2,
+    "tamañoId": 2,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      2,
+      13
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/QJhNdS4/img619.jpg"
+  },
+  {
+    "name": "Serum Brightening Moonshine by Ame",
+    "descripcion": "Serum aclarante y despigmentante facial, contiene arbutina al 2% y azeloglicina al 1,5%, encargados de aclarar tu piel.",
+    "precio_compra": 562,
+    "porcentaje_ganancia": 40, 
+    "precio_venta": 817,
+    "referencia_proveedor": "REF567",
+    "marcaId": 8,
+    "categoriaId": 2,
+    "tamañoId": 3,
+    "proveedorId": 6,
+    "subcategoriaId": [
+      8,
+      18,
+      3,
+      1
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/TM0GX8R/img622.jpg"
+  },
+  {
+    "name": "Contorno Bioaqua",
+    "descripcion": "Contorno de ojos con vitamina C",
+    "precio_compra": 171,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 899,
+    "referencia_proveedor": "REF901",
+    "marcaId": 19,
+    "categoriaId": 2,
+    "tamañoId": 4,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      16,
+      19,
+      12
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/4MQX1N1/img684.jpg"
+  },
+  {
+    "name": "Parche de Ojeras Snail Kiss Beauty",
+    "descripcion": "Mejora tu piel, reduciendo el aspecto de tus ojeras.",
+    "precio_compra": 621,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 662,
+    "referencia_proveedor": "REF879",
+    "marcaId": 6,
+    "categoriaId": 2,
+    "tamañoId": 2,
+    "proveedorId": 6,
+    "subcategoriaId": [
+      2,
+      14,
+      6,
+      7
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/HTzz2Dv/img631.jpg"
+  },
+  {
+    "name": "Crema Facial Arroz Bioaqua",
+    "descripcion": "Crema facial de uso diario.",
+    "precio_compra": 488,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 820,
+    "referencia_proveedor": "REF702",
+    "marcaId": 22,
+    "categoriaId": 2,
+    "tamañoId": 2,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      5,
+      18,
+      3,
+      17
+    ],
+    "imagenes":["https://i.ibb.co/bJBK4KZ/img665.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/qmWvHPM/img663.jpg"
+  },
+  {
+    "name": "Agua Micelar Kiss Beauty",
+    "descripcion": "Agua Micelar con extracto de pepino, aguacate, alo vera y hamamelis.",
+    "precio_compra": 767,
+    "porcentaje_ganancia": 50,
+    "precio_venta": 860,
+    "referencia_proveedor": "REF463",
+    "marcaId": 14,
+    "categoriaId": 2,
+    "tamañoId": 2,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      12,
+      9,
+      19,
+      16
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/nkmp7x7/img827.jpg"
+  },
+  {
+    "name": "Desmaquillante Kiss Beauty",
+   "descripcion": "Desmaquillante con proteína de colágeno.",
+    "precio_compra": 147,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 537,
+    "referencia_proveedor": "REF376",
+    "marcaId": 3,
+    "categoriaId": 2,
+    "tamañoId": 1,
+    "proveedorId": 5,
+    "subcategoriaId": [
+      15,
+      7,
+      13
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/CtBw9pB/img834.jpg"
+  },
+  {
+    "name": "Sereum ácido Salicilico Veze",
+    "descripcion": "Suero de ácido salicílico para prevenir el acne y la producción de grasita en la piel.",
+    "precio_compra": 157,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 373,
+    "referencia_proveedor": "REF927",
+    "marcaId": 17,
+    "categoriaId": 2,
+    "tamañoId": 3,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      1,
+      18
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/C0hGF8n/img969.jpg"
+  },
+  {
+    "name": "Tajalapiz Cosmético",
+    "descripcion": "Tajalapiz para delineadores",
+    "precio_compra": 214,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 333,
+    "referencia_proveedor": "REF732",
+    "marcaId": 11,
+    "categoriaId": 3,
+    "tamañoId": 3,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      19,
+      9,
+      12
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/BqSqB1c/img884.jpg"
+  },
+  {
+    "name": "Bálsamo Conitos",
+    "descripcion": "Bálsamo para labios",
+    "precio_compra": 347,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 875,
+    "referencia_proveedor": "REF429",
+    "marcaId": 2,
+    "categoriaId": 1,
+    "tamañoId": 4,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      10,
+      11,
+      7,
+      2
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/6XQw0ZN/img2215.jpg"
+  },
+  {
+    "name": "Set de Pinceles para Ojos",
+    "descripcion": "Set de pinceles para maquillaje de ojos",
+    "precio_compra": 782,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 842,
+    "referencia_proveedor": "REF537",
+    "marcaId": 24,
+    "categoriaId": 3,
+    "tamañoId": 3,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      4,
+      18,
+      5
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "imagen de prueba"
+  },
+  {
+    "name": "Brocha para cejas Bloomshell",
+    "descripcion": "Brocha para cejas.",
+    "precio_compra": 787,
+    "porcentaje_ganancia": 50,
+    "precio_venta": 868,
+    "referencia_proveedor": "REF128",
+    "marcaId": 6,
+    "categoriaId": 3,
+    "tamañoId": 1,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      9,
+      12,
+      19
+    ],
+    "imagenes":["https://i.ibb.co/0FbGLcK/img1608.jpg", ",https://i.ibb.co/pxv7dpc/img1610.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/bWyKrrs/img1606.jpg"
+  },
+  {
+    "name": "Pestañina Klean Color Waterproof",
+    "descripcion": "Pestañinas a prueba de agua, no baja el rizo, aporta largo y volumen.",
+    "precio_compra": 768,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 878,
+    "referencia_proveedor": "REF645",
+    "marcaId": 9,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      6,
+      7
+    ],
+    "imagenes":["https://i.ibb.co/0Br6J1v/img2979.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/8j8mtPy/img2977.jpg"
+  },
+  {
+    "name": "Tinta de Labios Coca-Cola",
+    "descripcion": "Tinta de labios.",
+    "precio_compra": 150,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 364,
+    "referencia_proveedor": "REF926",
+    "marcaId": 13,
+    "categoriaId": 1,
+    "tamañoId": 1,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      5,
+      1,
+      18,
+      8
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/QJrQ8F9/img2281.jpg"
+  },
+  {
+    "name": "Jabón Naranjas",
+    "descripcion": "Jabón corporal artesanal.",
+    "precio_compra": 239,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 418,
+    "referencia_proveedor": "REF302",
+    "marcaId": 10,
+    "categoriaId": 3,
+    "tamañoId": 1,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      19,
+      9,
+      16
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/JHWwFJT/img1018.jpg"
+  },
+  {
+    "name": "Tinta de Labios Confite",
+    "descripcion": "Tinte de labios de larga duración.",
+    "precio_compra": 121,
+    "porcentaje_ganancia": 25,
+    "precio_venta": 249,
+    "referencia_proveedor": "REF746",
+    "marcaId": 20,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 4,
+    "subcategoriaId": [
+      15,
+      14
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/qMCmcCC/img2278.jpg"
+  },
+  {
+    "name": "Duo Lip Gloss Mágico + Voluminizador Karité",
+    "descripcion": "Voluminizador y brillo labial.",
+    "precio_compra": 414,
+    "porcentaje_ganancia": 30,
+    "precio_venta": 653,
+    "referencia_proveedor": "REF642",
+    "marcaId": 5,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      8,
+      17,
+      4
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/yy0JshQ/img2330.jpg"
+  },
+  {
+    "name": "Pestañiña Americana Amor Us",
+    "descripcion": "Máscara de pestañas para un volumen extra.",
+    "precio_compra": 577,
+    "porcentaje_ganancia": 45,
+    "precio_venta": 661,
+    "referencia_proveedor": "REF925",
+    "marcaId": 18,
+    "categoriaId": 1,
+    "tamañoId": 3,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      12,
+      19
+    ],
+    "imagenes":["https://i.ibb.co/1GbW5Lk/img3021.jpg"],
+    "imagenPrincipal": "https://i.ibb.co/BrcQT0f/img3019.jpg"
+  },
+  {
+    "name": "Jabón Blond Girl Kiss Beauty",
+    "descripcion": "Jabó para cejas de excelente calidad.",
+    "precio_compra": 140,
+    "porcentaje_ganancia": 50,
+    "precio_venta": 270,
+    "referencia_proveedor": "REF839",
+    "marcaId": 21,
+    "categoriaId": 3,
+    "tamañoId": 3,
+    "proveedorId": 3,
+    "subcategoriaId": [
+      15,
+      6
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/1rd6m74/img3029.jpg"
+  },
+  {
+    "name": "Encrespador Ruby Face Bicolor",
+    "descripcion": "Excelente encrespador para arquear tus pestañas.",
+    "precio_compra": 733,
+    "porcentaje_ganancia": 35,
+    "precio_venta": 798,
+    "referencia_proveedor": "REF468",
+    "marcaId": 7,
+    "categoriaId": 1,
+    "tamañoId": 1,
+    "proveedorId": 2,
+    "subcategoriaId": [
+      5,
+      18,
+      1,
+      3
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/GvCY6qR/img1504.jpg"
+  },
+  {
+    "name": "Iluminador Hudamoji",
+    "descripcion": "Iluminador con forma de frutas de excelente pigmentación.",
+    "precio_compra": 498,
+    "porcentaje_ganancia": 40,
+    "precio_venta": 615,
+    "referencia_proveedor": "REF143",
+    "marcaId": 12,
+    "categoriaId": 1,
+    "tamañoId": 2,
+    "proveedorId": 1,
+    "subcategoriaId": [
+      9,
+      12
+    ],
+    "imagenes":[""],
+    "imagenPrincipal": "https://i.ibb.co/f8TNsmr/img1929.jpg"
+  }
+]

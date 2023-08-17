@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Maquillaje Artificial",
+    "link_catalogo": "https://docs.google.com/spreadsheets/d/",
+    "asesor": "Marcos",
+    "telefono": "310254875",
+    "direccion": "Calle 23B #118-65",
+    "celular": "310511458",
+    "correo_electronico": "asdsa@sdfsd.com",
+    "condiciones_pago": "Compra mínima 200.000"
+  },
+  {
+    "name": "Ropa Fashion",
+    "link_catalogo": "https://docs.google.com/spreadsheets/d/",
+    "asesor": "Laura",
+    "telefono": "312548963",
+    "direccion": "Av. Principal #45-12",
+    "celular": "310478965",
+    "correo_electronico": "ropa_fashion@example.com",
+    "condiciones_pago": "Compra mínima 150.000"
+  },
+  {
+    "name": "Joyas Elegantes",
+    "link_catalogo": "https://docs.google.com/spreadsheets/d/",
+    "asesor": "Carlos",
+    "telefono": "310254789",
+    "direccion": "Cra. 10 #25-30",
+    "celular": "315789654",
+    "correo_electronico": "joyas_elegantes@example.com",
+    "condiciones_pago": "Compra mínima 100.000"
+  },
+  {
+    "name": "ElectroHogar",
+    "link_catalogo": "https://docs.google.com/spreadsheets/d/",
+    "asesor": "Ana",
+    "telefono": "311235689",
+    "direccion": "Calle 15 #56-78",
+    "celular": "314587965",
+    "correo_electronico": "electrohogar@example.com",
+    "condiciones_pago": "Compra mínima 250.000"
+  },
+  {
+    "name": "Zapatería Moderna",
+    "link_catalogo": "https://docs.google.com/spreadsheets/d/",
+    "asesor": "Pedro",
+    "telefono": "310987654",
+    "direccion": "Av. Central #78-90",
+    "celular": "310487965",
+    "correo_electronico": "zapateria_moderna@example.com",
+    "condiciones_pago": "Compra mínima 120.000"
+  },
+  {
+    "name": "Juguetes Divertidos",
+    "link_catalogo": "https://docs.google.com/spreadsheets/d/",
+    "asesor": "Marta",
+    "telefono": "317896541",
+    "direccion": "Cra. 20 #34-56",
+    "celular": "312478965",
+    "correo_electronico": "juguetes_divertidos@example.com",
+    "condiciones_pago": "Compra mínima 80.000"
+  }
+]

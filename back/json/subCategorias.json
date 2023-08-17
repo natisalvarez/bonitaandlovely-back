@@ -1,0 +1,22 @@
+[
+    { "name": "Pestañina", "categoriaId": 1 },
+    { "name": "Serum", "categoriaId": 2 },
+    { "name": "Delineador", "categoriaId": 1 },
+    { "name": "Corrector", "categoriaId": 1 },
+    { "name": "Polvos", "categoriaId": 1 },
+    { "name": "Protector solar", "categoriaId": 2 },
+    { "name": "Crema", "categoriaId": 2 },
+    { "name": "Limpieza", "categoriaId": 2 },
+    { "name": "Iluminadores", "categoriaId": 1 },
+    { "name": "Rubor", "categoriaId": 1 },
+    { "name": "Hidratación", "categoriaId": 2 },
+    { "name": "Cejas", "categoriaId": 3 },
+    { "name": "Labiales", "categoriaId": 1 },
+    { "name": "Sombras", "categoriaId": 1 },
+    { "name": "Facial", "categoriaId": 3 },
+    { "name": "Cabello", "categoriaId": 3 },
+    { "name": "Exfoliante", "categoriaId": 2 },
+    { "name": "Cuidado de piel", "categoriaId": 2 },
+    { "name": "Brochas", "categoriaId": 3 }
+  ]
+  

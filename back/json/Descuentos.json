@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Primera Compra",
+    "porcentaje": "30",
+    "codigo": "PRI-1-COMPRA",
+    "condiciones": "Debe ser solo para la primera compra"
+  },
+  {
+    "name": "Descuento Especial",
+    "porcentaje": "20",
+    "codigo": "DESC-2-ESP",
+    "condiciones": "Válido para compras mayores a 100.000"
+  },
+  {
+    "name": "Descuento Navideño",
+    "porcentaje": "15",
+    "codigo": "NAV-3-DESC",
+    "condiciones": "Válido para compras realizadas durante diciembre"
+  },
+  {
+    "name": "Oferta de Verano",
+    "porcentaje": "25",
+    "codigo": "VER-4-OFERTA",
+    "condiciones": "Válido para productos de la categoría 'Verano'"
+  },
+  {
+    "name": "Descuento Especial",
+    "porcentaje": "10",
+    "codigo": "ESP-5-DESC",
+    "condiciones": "Válido solo para usuarios registrados"
+  }
+]

@@ -41,7 +41,7 @@ const FavoritoData = require('./json/Favoritos.json')
 const postColorArray = require('./src/controllers/Color/postColorArray')
 const ColorData = require('./json/color.json')
 const postArrayInventario = require('./src/controllers/Inventario/postArrayInventario')
-const InventarioData = require('./json/inventario.json')
+const InventarioData = require('./json/inventario.json');
 
 async function loadCategoriaData() {
   try {

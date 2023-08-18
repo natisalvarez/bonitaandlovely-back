@@ -13,6 +13,7 @@ mercadopago.configure({
   access_token: MERCADO_PAGO_ACCESS_TOKEN,
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 require('./db.js');
 

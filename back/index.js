@@ -34,7 +34,7 @@ const postArrayProveedor = require('./src/controllers/Proveedor/postArrayProveed
 const ProveedorData = require('./json/Proveedores.json')
 const postArrayProducto = require('./src/controllers/Producto/postProductoArray');
 const ProductoData = require('./json/Producto.json')
-const postArrayCliente = require('./src/controllers/cliente/postArrayCliente');
+const postArrayClientes = require('./src/controllers/Cliente/postArrayClientes');
 const ClienteData = require('./json/cliente.json')
 const postArrayFavorito = require('./src/controllers/Favoritos/postArrayFavorito')
 const FavoritoData = require('./json/Favoritos.json')
@@ -66,7 +66,7 @@ async function loadCategoriaData() {
       await postArrayProducto(ProductoData);
       console.log('Producto data loaded.');
 
-      await postArrayCliente(ClienteData);
+      await postArrayClientes(ClienteData);
       console.log('Cliente data loaded.');
 
       await postArrayFavorito(FavoritoData);

@@ -4,7 +4,7 @@ const router = express.Router();
 const getAllClientes = require('../controllers/Cliente/getAllClientes');
 const getIdCliente = require('../controllers/Cliente/getIdCliente');
 const postCliente = require('../controllers/Cliente/postCliente');
-const postArrayCliente = require('../controllers/Cliente/postArrayCliente');
+const postArrayClientes = require('../controllers/Cliente/postArrayClientes');
 const putPropsCliente = require('../controllers/Cliente/putPropsCliente')
 const deleteCliente = require('../controllers/Cliente/deleteCliente')
 const putActiveCliente = require('../controllers/Cliente/putActiveCliente')
@@ -37,7 +37,7 @@ router.post('/', async (req, res) => {
   try {
     
     if (Array.isArray(req.body)) {
-      const clientes = await postArrayCliente(req.body);
+      const clientes = await postArrayClientes(req.body);
       res.status(200).json(clientes);
     } else {
       const cliente = await postCliente(req.body);

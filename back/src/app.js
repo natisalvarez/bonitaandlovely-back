@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const routes = require('./routes/index.js');
 const helmet = require('helmet'); // Agregamos el paquete 'helmet' para seguridad
 const mercadopago = require("mercadopago");
-const path = require('path'); // Add this line to import the path module
 
 require('dotenv').config()
 const { MERCADO_PAGO_ACCESS_TOKEN, MERCADO_PAGO_KEY } = process.env
@@ -13,7 +12,6 @@ mercadopago.configure({
   access_token: MERCADO_PAGO_ACCESS_TOKEN,
 });
 
-app.use(express.static(path.join(__dirname, 'public')));
 
 require('./db.js');
 

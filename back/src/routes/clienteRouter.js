@@ -1,13 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const getAllCliente = require('../controllers/cliente/getAllCliente');
-const getIdCliente = require('../controllers/cliente/getIdCliente');
-const postCliente = require('../controllers/cliente/postCliente');
-const postArrayCliente = require('../controllers/cliente/postArrayCliente');
-const putPropsCliente = require('../controllers/cliente/putPropsCliente')
-const deleteCliente = require('../controllers/cliente/deleteCliente')
-const putActiveCliente = require('../controllers/cliente/putActiveCliente')
+const getAllCliente = require('../controllers/Cliente/getAllCliente');
+const getIdCliente = require('../controllers/Cliente/getIdCliente');
+const postCliente = require('../controllers/Cliente/postCliente');
+const postArrayCliente = require('../controllers/Cliente/postArrayCliente');
+const putPropsCliente = require('../controllers/Cliente/putPropsCliente')
+const deleteCliente = require('../controllers/Cliente/deleteCliente')
+const putActiveCliente = require('../controllers/Cliente/putActiveCliente')
 
 // Ruta para obtener todos los clientes
 router.get('/', async (req, res) => {

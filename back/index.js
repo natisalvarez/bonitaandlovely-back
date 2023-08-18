@@ -23,25 +23,25 @@ const { conn } = require('./src/db');
 const { PORT } = process.env;
 
 const postCategoriaArray = require ('./src/controllers/Categoria/postCategoriaArray')
-const categoriaData = require('../json/categorias.json');
+const categoriaData = require('./json/categorias.json');
 const postSubCategoriaArray = require('./src/controllers/SubCategoria/postSubCategoriaArray')
-const subCategoriaData = require('../json/subCategorias.json')
+const subCategoriaData = require('./json/subCategorias.json')
 const postArrayMarca = require('./src/controllers/Marca/postArrayMarca')
-const MarcaData = require('../json/Marca.json')
+const MarcaData = require('./json/Marca.json')
 const postArraySize = require('./src/controllers/size/postArraySize');
-const SizeData = require('../json/Size.json')
+const SizeData = require('./json/Size.json')
 const postArrayProveedor = require('./src/controllers/Proveedor/postArrayProveedor');
-const ProveedorData = require('../json/Proveedores.json')
+const ProveedorData = require('./json/Proveedores.json')
 const postArrayProducto = require('./src/controllers/Producto/postProductoArray');
-const ProductoData = require('../json/Producto.json')
+const ProductoData = require('./json/Producto.json')
 const postArrayCliente = require('./src/controllers/cliente/postArrayCliente');
-const ClienteData = require('../json/cliente.json')
+const ClienteData = require('./json/cliente.json')
 const postArrayFavorito = require('./src/controllers/Favoritos/postArrayFavorito')
-const FavoritoData = require('../json/Favoritos.json')
+const FavoritoData = require('./json/Favoritos.json')
 const postColorArray = require('./src/controllers/Color/postColorArray')
-const ColorData = require('../json/color.json')
+const ColorData = require('./json/color.json')
 const postArrayInventario = require('./src/controllers/Inventario/postArrayInventario')
-const InventarioData = require('../json/inventario.json')
+const InventarioData = require('./json/inventario.json')
 
 async function loadCategoriaData() {
   try {

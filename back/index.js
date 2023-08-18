@@ -22,7 +22,7 @@ const server = require('./src/app');
 const { conn } = require('./src/db');
 const { PORT } = process.env;
 
-const postCategoriaArray = require ('./src/controllers/Categoria/postCategoriaArray')
+const postCategoriaArray = require ('./src/controllers/Categoria/postCategoriaArray');
 const categoriaData = require('./json/categorias.json');
 const postSubCategoriaArray = require('./src/controllers/SubCategoria/postSubCategoriaArray')
 const subCategoriaData = require('./json/subCategorias.json')

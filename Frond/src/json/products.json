@@ -1,0 +1,64 @@
+{
+  "products": [
+    {
+      "title": "Foundation",
+      "price": "$25.99",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Eyeshadow Palette",
+      "price": "$19.99",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Mascara",
+      "price": "$12.50",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Red Lipstick",
+      "price": "$9.99",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Liquid Concealer",
+      "price": "$14.95",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Blush",
+      "price": "$8.75",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Eyeliner",
+      "price": "$10.50",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Makeup Brushes",
+      "price": "$29.99",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Powder Highlighter",
+      "price": "$17.25",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Compact Powder",
+      "price": "$12.99",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Matte Lipstick",
+      "price": "$11.50",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    },
+    {
+      "title": "Makeup Sponge",
+      "price": "$6.99",
+      "image": "https://img.freepik.com/foto-gratis/coleccion-productos-maquillaje-belleza_23-2148620012.jpg?w=1380&t=st=1690925976~exp=1690926576~hmac=0acffb731bef51603a457a8c3729f4bf95560fd7ca7865ac4565290b91173c12"
+    }
+  ]
+}

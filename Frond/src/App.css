@@ -1,0 +1,35 @@
+
+.App {
+  text-align: center;
+  background-color: #ebeaea;
+}
+
+.title {
+  font-family: "Manrope", sans-serif;
+}
+
+.body-text {
+  font-family: "Nunito", sans-serif;
+}
+
+.primary-color {
+  color: #b959bb;
+  /* Otros estilos */
+}
+
+.secondary-color {
+  color: #8d8af1;
+  /* Otros estilos */
+}
+
+/* CSS */
+.button {
+  background-color: #b959bb;
+  /* Otros estilos */
+}
+
+.button:hover {
+  background-color: #eecafa;
+  /* Otros estilos */
+}
+

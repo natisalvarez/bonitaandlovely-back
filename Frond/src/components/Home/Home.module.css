@@ -1,0 +1,47 @@
+.todo-collection *{
+    border: 2px solid black;
+    text-align: center;
+   }
+   
+   .primer-div{
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       padding: 3vw;
+   }
+   
+   .primer-div .img{
+       width: 15vw;
+       height: 20vh;
+   } 
+   
+   .flex{
+       display: flex;
+       justify-content: space-around;
+   }
+   
+   .productos{
+       display: flex;
+       flex-wrap: wrap;
+   }
+   
+   .productos > div{
+       width: 45vw;
+       margin: 2vw;
+   }
+   
+   .img-redonda{
+       border-radius: 1000000px;
+       width: 15vw;
+       height: 14vw;
+   }
+   
+   .productoss{
+       display: flex;
+       justify-content: space-around;
+   }
+   
+   .productoss .title{
+       display: flex;
+       justify-content: space-between;
+   }

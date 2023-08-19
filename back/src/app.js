@@ -75,7 +75,7 @@ server.post("/pagoCarrito", (req, res) => {
       // success: "http://localhost:3000",
       // failure: "http://localhost:3000",
       // pending: "",
-      success: "bonitaandlovely-front-production.up.railway.app'/catalogo",
+      success: "bonitaandlovely-front-production.up.railway.app/catalogo",
       failure: "bonitaandlovely-front-production.up.railway.app",
       pending: "",
     },

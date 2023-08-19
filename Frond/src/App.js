@@ -28,7 +28,7 @@ import { useDispatch} from "react-redux";
 import { useParams } from "react-router-dom"; 
 //para no repetir el puerto:(se está configurando una URL base que se utilizará como prefijo para todas las peticiones realizadas con Axios) 
 // axios.defaults.baseURL = "http://localhost:3001/"
-axios.defaults.baseURL = "bonitaandlovely-back-production.up.railway.app/"
+axios.defaults.baseURL = "https://bonitaandlovely-back-91g67dy45-natisalvarez.vercel.app/"
 
 // import ActionProvider from "./components/ChatBot/ActionProvider";
 

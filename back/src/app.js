@@ -13,8 +13,6 @@ mercadopago.configure({
 });
 require('./db.js');
 
-const server = express();
-
 server.name = 'API';
 
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));

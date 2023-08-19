@@ -1,4 +1,3 @@
-const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
@@ -12,6 +11,8 @@ mercadopago.configure({
   access_token: MERCADO_PAGO_ACCESS_TOKEN,
 });
 require('./db.js');
+
+const server = express();
 
 server.name = 'API';
 

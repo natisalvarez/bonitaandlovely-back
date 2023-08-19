@@ -53,7 +53,7 @@ server.use((err, req, res, next) => {
 
 //Mercado pago:
 server.get("/", function (req, res) {
-  const filePath = path.resolve(__dirname, "..", "client", "index.html");
+  const filePath = path.resolve(__dirname, "..", "client");
   res.sendFile(filePath);
 });
 

@@ -66,18 +66,18 @@ const Catalogfilters = () => {
     });
     setFilterChanged(true);
   }
-  useEffect(() => {
 
-    if (productosFiltrados.length > 0) {
+  useEffect(() => {
+    if (Array.isArray(productosFiltrados) && productosFiltrados.length > 0) {
       const filteredCategoriaId = productosFiltrados.map(producto => producto.categoriaId);
       
       setSelectedFilters(prevFilters => ({
         ...prevFilters,
         categoriaId: filteredCategoriaId,
-
       }));
     }
-  }, []);
+  }, [productosFiltrados]);
+
 
   useEffect(() => {
     if (

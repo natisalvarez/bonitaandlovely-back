@@ -72,8 +72,8 @@ server.post("/pagoCarrito", (req, res) => {
   let preference = {
     items: items,
     back_urls: {
-      success: "http://localhost:3000",
-      failure: "http://localhost:3000",
+      success: "'bonitaandlovely-front-production.up.railway.app'",
+      failure: "'bonitaandlovely-front-production.up.railway.app'",
       pending: "",
     },
     auto_return: "approved",
@@ -104,8 +104,8 @@ server.post("/pago", (req, res) => {
       },
     ],
     back_urls: {
-      success: "http://localhost:3000/catalogo",
-      failure: "http://localhost:3000",
+      success: "'bonitaandlovely-front-production.up.railway.app'/catalogo",
+      failure: "'bonitaandlovely-front-production.up.railway.app'",
       pending: "",
     },
     auto_return: "approved",

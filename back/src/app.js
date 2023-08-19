@@ -49,8 +49,6 @@ server.use((err, req, res, next) => {
   res.status(500).send('Internal Server Error');
 });
 
-
-/*
 require('./db.js');
 
 const server = express();
@@ -113,8 +111,8 @@ server.post("/pagoCarrito", (req, res) => {
       // success: "http://localhost:3000",
       // failure: "http://localhost:3000",
       // pending: "",
-      success: "bonitaandlovely-front-production.up.railway.app",
-      failure: "bonitaandlovely-front-production.up.railway.app",
+      success: "bonitaandlovely-back-git-main-natisalvarez.vercel.app",
+      failure: "bonitaandlovely-back-git-main-natisalvarez.vercel.app",
       pending: "",
     },
     auto_return: "approved",
@@ -146,8 +144,8 @@ server.post("/pago", (req, res) => {
       },
     ],
     back_urls: {
-      success: "bonitaandlovely-front-production.up.railway.app/catalogo",
-      failure: "bonitaandlovely-front-production.up.railway.app",
+      success: "bonitaandlovely-back-git-main-natisalvarez.vercel.app/catalogo",
+      failure: "bonitaandlovely-back-git-main-natisalvarez.vercel.app",
       pending: "",
     },
     auto_return: "approved",
@@ -163,8 +161,5 @@ server.post("/pago", (req, res) => {
       res.status(400).send(error.message)
     });
 });
-
-*/
-
 
 module.exports = server;

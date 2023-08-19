@@ -5,7 +5,6 @@ const morgan = require('morgan');
 const routes = require('./routes/index.js');
 const helmet = require('helmet'); // Agregamos el paquete 'helmet' para seguridad
 const mercadopago = require("mercadopago");
-
 require('dotenv').config()
 const { MERCADO_PAGO_ACCESS_TOKEN, MERCADO_PAGO_KEY } = process.env
 mercadopago.configure({
@@ -23,7 +22,7 @@ server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());
 server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', /* 'bonitaandlovely-front-production.up.railway.app'*/  '*' );
+  res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Credentials', 'true');
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
@@ -69,57 +68,30 @@ server.post("/pagoCarrito", (req, res) => {
     };
   });
 
-  //Descomentar lo de abajo
-  
-//   let preference = {
-//     items: items,
-//     back_urls: {
-//       success: "http://localhost:3000",
-//       failure: "http://localhost:3000",
-//       pending: "",
-//     },
-//     auto_return: "approved",
-//     binary_mode: true,
-//   };
+  let preference = {
+    items: items,
+    back_urls: {
+      // success: "http://localhost:3000",
+      // failure: "http://localhost:3000",
+      // pending: "",
+      success: "bonitaandlovely-front-production.up.railway.app'/catalogo",
+      failure: "bonitaandlovely-front-production.up.railway.app",
+      pending: "",
+    },
+    auto_return: "approved",
+    binary_mode: true,
+  };
+   
 
-//   mercadopago.preferences
-//     .create(preference)
-//     .then((response)=> {
-//       res.status(200).send({ response });
-//     })
-//     .catch((error)=> {
-//       res.status(400).send(error.message);
-//     });
-// });
-
-// Descomentar lo de abajo:
-
-//       success: "bonitaandlovely-front-production.up.railway.app'/catalogo",
-//       failure: "bonitaandlovely-front-production.up.railway.app",
-//       pending: "",
-
-  
-let preference = {
-  items: items,
-  back_urls: {
-    success: "bonitaandlovely-front-production.up.railway.app'/catalogo",
-    failure: "bonitaandlovely-front-production.up.railway.app",
-    pending: "",
-  },
-  auto_return: "approved",
-  binary_mode: true,
-};
-
-mercadopago.preferences
-  .create(preference)
-  .then((response)=> {
-    res.status(200).send({ response });
-  })
-  .catch((error)=> {
-    res.status(400).send(error.message);
-  });
+  mercadopago.preferences
+    .create(preference)
+    .then((response)=> {
+      res.status(200).send({ response });
+    })
+    .catch((error)=> {
+      res.status(400).send(error.message);
+    });
 });
-
 
 server.post("/pago", (req, res) => {
   const producto = req.body;
@@ -135,15 +107,13 @@ server.post("/pago", (req, res) => {
       },
     ],
     back_urls: {
-      success: "'bonitaandlovely-front-production.up.railway.app'/catalogo",
-      failure: "'bonitaandlovely-front-production.up.railway.app'",
+      success: "http://localhost:3000/catalogo",
+      failure: "http://localhost:3000",
       pending: "",
     },
     auto_return: "approved",
     binary_mode:true,
   };
-
-  
 
   mercadopago.preferences
     .create(preference)

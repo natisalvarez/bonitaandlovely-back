@@ -28,7 +28,11 @@ import { useDispatch} from "react-redux";
 import { useParams } from "react-router-dom"; 
 //para no repetir el puerto:(se está configurando una URL base que se utilizará como prefijo para todas las peticiones realizadas con Axios) 
 // axios.defaults.baseURL = "http://localhost:3001/"
-axios.defaults.baseURL = "bonitaandlovely-back-git-main-natisalvarez.vercel.app/"
+
+//acá va el link del back (el de vercel va en app.js del back) -->
+// //"bonitaandlovely-back-git-main-natisalvarez.vercel.app/"
+
+axios.defaults.baseURL = "bonitaandlovely-back-production.up.railway.app"
 
 // import ActionProvider from "./components/ChatBot/ActionProvider";
 

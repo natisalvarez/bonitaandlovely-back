@@ -49,6 +49,7 @@ server.use((err, req, res, next) => {
   res.status(500).send('Internal Server Error');
 });
 
+/*
 //Mercado pago:
 server.get("/", function (req, res) {
   const filePath = path.resolve(__dirname, "..", "Frond", "public", "index.html"); 
@@ -123,5 +124,6 @@ server.post("/pago", (req, res) => {
       res.status(400).send(error.message)
     });
 });
+*/
 
 module.exports = server;

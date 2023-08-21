@@ -66,18 +66,18 @@ const Catalogfilters = () => {
     });
     setFilterChanged(true);
   }
-
   useEffect(() => {
-    if (Array.isArray(productosFiltrados) && productosFiltrados.length > 0) {
+
+    if (productosFiltrados.length > 0) {
       const filteredCategoriaId = productosFiltrados.map(producto => producto.categoriaId);
       
       setSelectedFilters(prevFilters => ({
         ...prevFilters,
         categoriaId: filteredCategoriaId,
+
       }));
     }
-  }, [productosFiltrados]);
-
+  }, []);
 
   useEffect(() => {
     if (
@@ -107,9 +107,9 @@ const Catalogfilters = () => {
   }
 
     return (
-      <div className="grid grid-cols-1 m-auto w-[90%] bg-white text-black py-10 text-lg capitalize justify-items-start">
-        <h2 className="font-bold text-2xl">todos</h2>
-        <p>Productos {total}</p>
+      <div className="grid grid-cols-1  w-[90%] bg-white text-black py-10 text-lg capitalize justify-items-start">
+        <h2 className="font-bold text-2xl">total</h2>
+        <p>{total} productos</p>
        
         {/* talla */}
         <div className="pt-5">
@@ -206,4 +206,3 @@ const Catalogfilters = () => {
   };
   
   export default Catalogfilters;
-  

@@ -70,8 +70,8 @@ server.post("/pagoCarrito", (req, res) => {
       // success: "http://localhost:3000",
       // failure: "http://localhost:3000",
       // pending: "",
-      success: "bonitaandlovely-back-git-main-natisalvarez.vercel.app",
-      failure: "bonitaandlovely-back-git-main-natisalvarez.vercel.app",
+      success: "*",
+      failure: "*",
       pending: "",
     },
     auto_return: "approved",
@@ -103,13 +103,15 @@ server.post("/pago", (req, res) => {
       },
     ],
     back_urls: {
-      success: "bonitaandlovely-back-git-main-natisalvarez.vercel.app/catalogo",
-      failure: "bonitaandlovely-back-git-main-natisalvarez.vercel.app",
+      success: "*",
+      failure: "*",
       pending: "",
     },
     auto_return: "approved",
     binary_mode:true,
   };
+
+ //"bonitaandlovely-back-git-main-natisalvarez.vercel.app/catalogo",
 
   mercadopago.preferences
     .create(preference)

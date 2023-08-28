@@ -50,6 +50,7 @@ server.use((err, req, res, next) => {
 });
 
 
+
 //Mercado pago:
 
 server.post("/pagoCarrito", (req, res) => {
@@ -61,6 +62,7 @@ server.post("/pagoCarrito", (req, res) => {
       title: producto.nombre,
       unit_price: Number(producto.precio),
       description: producto.descripcion,
+      
     };
   });
 
@@ -70,8 +72,11 @@ server.post("/pagoCarrito", (req, res) => {
       // success: "http://localhost:3000",
       // failure: "http://localhost:3000",
       // pending: "",
-      success: "*",
-      failure: "*",
+
+      // "bonitaandlovely-git-main-brandonlopez98.vercel.app",
+      success: "bonitaandlovely-git-main-brandonlopez98.vercel.app/confirmedpayment",
+      failure: "bonitaandlovely-git-main-brandonlopez98.vercel.app",
+
       pending: "",
     },
     auto_return: "approved",
@@ -99,19 +104,19 @@ server.post("/pago", (req, res) => {
         title: producto.nombre,
         unit_price: Number(producto.precio),
         description: producto.descripcion,
-        quantity: 1
+        quantity: producto.quantity
       },
     ],
     back_urls: {
-      success: "*",
-      failure: "*",
+
+      success: "bonitaandlovely-git-main-brandonlopez98.vercel.app/confirmedpayment",
+      failure: "",
+
       pending: "",
     },
     auto_return: "approved",
     binary_mode:true,
   };
-
- //"bonitaandlovely-back-git-main-natisalvarez.vercel.app/catalogo",
 
   mercadopago.preferences
     .create(preference)

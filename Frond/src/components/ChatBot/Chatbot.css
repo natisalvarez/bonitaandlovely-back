@@ -1,9 +1,9 @@
 .chatbot-container {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 40px;
     z-index: 9999;
-    background-color:#EECAFA;
+    background-color:rgba(202, 202, 202, 0.513);
   }
   
   .chatbot-button {

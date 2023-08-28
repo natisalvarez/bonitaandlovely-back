@@ -1,42 +1,56 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import axios from "axios";
+import { useSelector } from "react-redux";
 
 const LoginButton = () => {
-  const { loginWithRedirect } = useAuth0();
-  const { user, isAuthenticated, isLoading } = useAuth0();
+  const { loginWithRedirect, isAuthenticated, user, isLoading } = useAuth0();
+  const clientes = useSelector((state) => state.Allclients);
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
 
-    try {
-      // Enviamos la solicitud POST aquí
-      await loginWithRedirect()
-      if(isAuthenticated){
-        const userData = {
-          name: user.name,
-          email: user.email
-        }
-        const response = await axios.post('/cliente', userData);
-        const data = await response.json();
-        console.log(data);
+
+  const handleLogin = async () => {
+    await loginWithRedirect();
+  };
+
+  if (isLoading) {
+    return (
+      <div>
+        <p>Cargando...</p>
+      </div>
+    );
+  }
+
+  
+
+  if (isAuthenticated && user) {
+    const { name, email } = user;
+    const admin = email === "bonitaandlovely@gmail.com" && 'passantinodev@gmail.com' ? true : false;
+    const userLogin = { name, correo_electronico: email, admin };
+    const existeCliente = clientes.find((cliente) => cliente.correo_electronico === email);
+    if (existeCliente) {
+      console.log("El cliente ya existe en la base de datos");
+    } else {
+      try {
+        const response = axios.post("/cliente", userLogin);
+        console.log("El cliente se ha creado con éxito: ", response);
+      } catch (error) {
+        console.error("Error al crear el cliente: ", error.message);
       }
-    } catch (error) {
-      console.error(error);
     }
   }
 
-  if(isAuthenticated){
-    return(
-        <div></div>
-    )
-  }
-
   return (
-    <form onSubmit={handleSubmit}>
-      <button className="mr-2" type="submit"><strong>Iniciar Sesion</strong></button>
-    </form>
-  );
-};
+    <>
+    {isAuthenticated ? (
+      <div></div>
+    ) : (
+      <button className="mr-2" onClick={handleLogin}>
+        <strong>Iniciar Sesión</strong>
+      </button>
+    )}
+  </>
+  )
+  }
 
 export default LoginButton;

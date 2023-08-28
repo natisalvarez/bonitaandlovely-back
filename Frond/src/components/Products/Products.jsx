@@ -4,6 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { categories, productFilter } from '../../redux/actions';
 import { useDispatch, useSelector } from 'react-redux';
+import Maquillaje from '../../assets/img/Maquillaje.jpeg'
+import Skincare from '../../assets/img/skincare.jpeg'
+import Accesorios from '../../assets/img/Accesorios.jpeg'
 
 
 const CardContainer = styled.div`
@@ -74,18 +77,18 @@ return (
   <><H1>Descubre nuestras categorias</H1><CardContainer>
 
     <Card>
-    <Img src={categoriasBg} alt="img" />
+    <Img src={Maquillaje} alt="img" />
     <h2 className='absolute m-6 text-white text-4xl font-bold'>Maquillaje</h2>
-    <button  name='maquillaje' onClick={filterByCategories} class="absolute h-10 px-10 font-semibold rounded-md  bg-indigo-400 mt-20 ml-10 text-white" type="submit">
+    <button  name='maquillaje' onClick={filterByCategories} style={{ backgroundColor: 'rgb(109, 1, 110)' }} class="absolute h-10 px-10 font-semibold rounded-md  mt-20 ml-10 text-white" type="submit">
             Ver mas
           </button>
 
     </Card>
 
     <Card>
-    <Img src={categoriasBg} alt="img" />
+    <Img src={Skincare} alt="img" />
     <h2 className='absolute m-6 text-white text-4xl font-bold'>Skincare</h2>
-    <button  name='skinCare' onClick={filterByCategories} class="absolute h-10 px-10 font-semibold rounded-md  bg-indigo-400 mt-20 ml-10 text-white" type="submit">
+    <button  name='skinCare' onClick={filterByCategories}  style={{ backgroundColor: 'rgb(109, 1, 110)' }} class="absolute h-10 px-10 font-semibold rounded-md  mt-20 ml-10 text-white" type="submit">
             Ver mas
           </button>
 
@@ -93,9 +96,9 @@ return (
     </Card>
 
     <Card>
-    <Img src={categoriasBg} alt="img" />
+    <Img src={Accesorios} alt="img" />
     <h2 className='absolute m-6 text-white text-4xl font-bold'>Accesorios</h2>
-    <button  name='accesorios' onClick={filterByCategories} class="absolute h-10 px-10 font-semibold rounded-md  bg-indigo-400 mt-20 ml-10 text-white" type="submit">
+    <button  name='accesorios' onClick={filterByCategories}   style={{ backgroundColor: 'rgb(109, 1, 110)' }} class="absolute h-10 px-10 font-semibold rounded-md  mt-20 ml-10 text-white" type="submit">
             Ver mas
           </button>
 

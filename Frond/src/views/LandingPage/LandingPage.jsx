@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { RiMoonClearLine, RiSunLine } from 'react-icons/ri';
 import NavBar from "../../components/NavBar/NavBar";
@@ -11,6 +11,8 @@ import Footer from '../../components/Footer/Footer';
 import ChatBotComponent from '../../components/ChatBot/ChatBot';
 import Reviews from '../../components/Reviews/Reviews'
 import ChooseUs from '../../components/ChooseUsSection/Choose';
+import { useDispatch, useSelector } from 'react-redux';
+import { clientes, products } from '../../redux/actions';
 
 
 const Container = styled.div`
@@ -20,10 +22,30 @@ const Container = styled.div`
 
 `;
 
-
-
-
 const LandingPage = () => {
+
+  const stateProducts = useSelector(state => state.Allproducts);
+const [pageNumberNx, setPageNumberNx] = useState(0);
+const numberSize = 20;
+console.log(stateProducts)
+
+const dispatch = useDispatch()
+useEffect(
+  () => {
+    const fetchData = () => {
+      const queries = {
+        page: pageNumberNx,
+        size: numberSize
+      };
+
+      dispatch(products(queries));
+    };
+
+    fetchData();
+  },
+  [dispatch, pageNumberNx, numberSize, stateProducts.paginas]
+);
+
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [language, setLanguage] = useState('en'); 
 
@@ -68,7 +90,6 @@ const LandingPage = () => {
         </>
 
       </Container>
-      <ChatBotComponent language={language} />
       <Footer />
     </>
   );

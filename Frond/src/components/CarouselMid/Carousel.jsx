@@ -3,7 +3,9 @@ import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styled from 'styled-components';
-import ofertas from '../../assets/img/Ofertas img.jpeg'
+import ofertas from '../../assets/img/3.png'
+import ofertas2 from '../../assets/img/4.png'
+import ofertas3 from '../../assets/img/5.png'
 
 
 const Carousel = () => {
@@ -29,11 +31,11 @@ const Carousel = () => {
     <CarouselContainer>
       <CarouselWrapper {...settings}>
         <div>
-        <img src={ofertas} alt="ofertas" />
+        <img src={ofertas3} alt="ofertas" />
         </div>
 
         <div>
-        <img src={ofertas} alt="ofertas" />
+        <img src={ofertas2} alt="ofertas" />
         </div>
 
         <div>
@@ -104,9 +106,7 @@ const CarouselWrapper = styled(Slider)`
     object-fit: cover;
     border-radius: 0.5rem;
     transition: all 0.5s ease;
-    opacity: 0.6;
-
-   
+ 
   }
 `;
 

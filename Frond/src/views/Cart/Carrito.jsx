@@ -1,30 +1,69 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { emptyCartLS, addCartLSToApi } from "../../redux/actions"
-import { NavLink } from 'react-router-dom';
+import { emptyCartLS, addCartLSToApi, deleteArtLS, deleteArtAPI } from "../../redux/actions"
+import { NavLink, useHistory } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import axios, { all } from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const Carrito = () => {
     const dispatch = useDispatch();
+    const [apicart, setApicart] = useState([]); 
+    const { user, isAuthenticated, isLoading } = useAuth0();
+    const usuarios = useSelector((state) => state.Allclients);
+  const currentUser = usuarios.find(
+    (usuario) =>
+      !isLoading &&
+      user &&
+      usuario.name.toLowerCase() === user.name.toLowerCase() &&
+      usuario.correo_electronico.toLowerCase() === user.email.toLowerCase()
+  );
 
-    
-    
-    // const { user, isAuthenticated} = useAuth0();
-    const user = 1
-    
-    const cartLS = useSelector(state => state.localCart); //estos son los item en carrito en local/
-    cartLS.forEach(item => {
-        console.log("cartLS", item);
-        console.log("cartLS id", item.id);
-        console.log("cartLS.color", item.color);
-        console.log("cartLS.amount", item.amount);
-    })
-    /* unificar amount de articulos start*/
+    const extractNumber = (string) => {
+        const match = string.match(/\d+/); 
+        return match ? parseInt(match[0]) : 0; 
+    }; 
+
+    const Clientela = useSelector(state=>state.Allclients);
+    const clientFound = isAuthenticated ? Clientela.find(client => client.correo_electronico === user.email) : null;
+    const NumUserId = isAuthenticated ? extractNumber(clientFound.id) : undefined;
+
+    // const [userInfo, setUserInfo] = useState({
+    //     nombre: '',
+    //     apellido: '',
+    //     correoElectronico: '',
+    //     numeroTelefono: '',
+    //     ciudad: '',
+    //     provincia: '',
+    //     codigoPostal: '',
+    //     contraseña: ''
+    // });
+
+    useEffect(() => {
+        if (isAuthenticated) {          
+          axios.get(`/carrito/${NumUserId}`)
+            .then(response => {
+              setApicart(response.data);
+            })
+            .catch(error => {             
+                Swal.fire({
+                  icon: 'error',
+                  title: 'Error',
+                  text: error.response?.data || 'Hubo un error en la solicitud.',
+                });
+              });
+        }else{
+            return
+        }
+      }, [NumUserId, isAuthenticated]);
+      
+    const cartLS = useSelector(state => state.localCart);
+
     const cartUnif = (cart) => {
         const countMap = {};
         cart.forEach((item) => {
-            if (item.id !== undefined && item.id !== null && item.color !== undefined && item.color !== null) {
-                const itemKey = `${item.id}_${item.color}`;
+            if (item.id !== undefined && item.id !== null && item.color) {
+                const itemKey = `${item.id}`;
                 if (countMap[itemKey]) {
                     countMap[itemKey] += item.amount;
                 } else {
@@ -33,147 +72,213 @@ const Carrito = () => {
             }
         });
         const cartUnifRes = Object.keys(countMap).map((itemKey) => {
-            const [itemId, color] = itemKey.split('_');
+            const [itemId] = itemKey.split('_');
             return {
                 objeto: cart.find((item) => item.id === itemId),
                 cantidad: countMap[itemKey],
-                color: color,
+                color: 1
             };
         });
         return cartUnifRes;
     };
-    /* unificar amount de articulos end*/
 
     const cartUnificado = cartUnif(cartLS);
-    cartUnificado.forEach(item => {
-        console.log("item", item);
-        console.log("item id", item.objeto.id);
-        console.log("item.color", item.color);
-        console.log("item.cantidad", item.cantidad);
-    })
 
-    // cartUnificado.forEach(item => {
-    //     const extractNumber = (input) => {
-    //         const string = String(input); // Convertir la entrada a una cadena
-    //         const match = string.match(/\d+/);
-    //         return match ? parseInt(match[0]) : 0;
-    //       };
-    //     const productId =  extractNumber(item.objeto.id) 
-    //     dispatch(addCartLSToApi({
-    //         user: 1,
-    //         productoId: 3,
-    //         colorId: 1,
-    //         cantidad: 1
-    //       }));
-    // })
-    const cartApi = useSelector(state => state.apiCart);
-    console.log("este es cartApi",cartApi);
+    useEffect(() => {
+        if (isAuthenticated && cartLS) {
+          dispatch(addCartLSToApi({ user: NumUserId, localCart: cartLS, colorId:1 }))
+            .catch(error => {             
+              Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: error.response?.data || 'Hubo un error en la solicitud.',
+              });
+            });
+            dispatch(emptyCartLS());
+        } else {
+          return;
+        }
+    }, [isAuthenticated]);
 
-    /* total costo x articulos */
-    const totalProd = cartUnificado.reduce((total, item) => total + (item.objeto.precio_venta * item.cantidad), 0);
+    const cartApi = useSelector(state => state.apiCart); console.log("cartApi", cartApi);console.log("cartUnificado", cartUnificado);
 
-    /* total de articulos en carrito local*/
-    const totalArts = cartUnificado.reduce((qty, item) => qty + (item.cantidad), 0);
+    const totalProd = isAuthenticated && cartApi && cartApi.productos
+    ? cartApi.productos.reduce((total, item) => total + (item.precio_venta * item.cantidad), 0)
+    : cartUnificado.reduce((total, item) => total + (item.objeto.precio_venta * item.cantidad), 0);
+
+    const totalArts = isAuthenticated && cartApi && cartApi.productos
+    ? cartApi.productos.reduce((qty, item) => qty + (item.cantidad), 0)
+    : cartUnificado.reduce((qty, item) => qty + (item.cantidad), 0);
+
+    
 
     const handleEmptyCart = () => {
         dispatch(emptyCartLS());
     }
 
-    // const goPay = () =>{
-    //     const cartToPay = `/carrito-${clienteId}`
-    // }
+    const handleDeleteArtLS = (item) => { console.log("item.cantidad", item.cantidad);
+        dispatch(deleteArtLS(item.objeto.id, item.cantidad, item.color));
+    }
 
-    const handleProceedToPayment = () => {
+    const handleDeleteArtAPI = async (item) => {
+        try {console.log("datos deleteArtApi", NumUserId, item.productoId,  item.colorId );
+          await dispatch(deleteArtAPI({ user: NumUserId, productoId: item.productoId, colorId:item.colorId })); 
+        } catch (error) {
+          console.error('Error en handleDeleteArtAPI:', error);
+          Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: error.response?.data || 'Hubo un error en la solicitud.',
+          });
+        }
+      }
 
+      const handleProceedToPayment = () => {
+        if (!isAuthenticated) {
+          Swal.fire("Debes iniciar sesión para continuar", "error", "error");
+          return;
+        }
+        if (
+          !currentUser.name ||
+          !currentUser.correo_electronico ||
+          !currentUser.telefono ||
+          !currentUser.contraseña
+        ) {
+          Swal.fire("Completa tu información de perfil antes de continuar", "", "error");
+          return;
+        }
+        // if (stateProducts.cantidad <= 0) {
+        //   Swal.fire("Producto agotado momentáneamente", "", "error");
+        //   return;
+        // }
+      
+        axios
+          .post("bonitaandlovely-production-a643.up.railway.app/pago", cartApi)
+          .then((res) => (window.location.href = res.data.response.body.init_point));
+      };
 
-        // axios.post('http://localhost:3001/pago', productToPay)
-        //     .then((res) => (window.location.href = res.data.response.body.init_point));
-    };
+    // const updateNombre = (nombre) => {
+    //     setUserInfo((prevUserInfo) => ({ ...prevUserInfo, nombre }));
+    // };
+
+    // const updateApellido = (apellido) => {
+    //     setUserInfo((prevUserInfo) => ({ ...prevUserInfo, apellido }));
+    // };
+
 
     return (
         <>
-            <div class="grid grid-cols-3 grid-rows-6 gap-5 mx-8 mt-6">
-                {/* columna izquierda detallar productos en carrito */}
-                {cartUnificado && cartUnificado.length > 0 ? (
-                    <>
-                        {cartUnificado.map((item, index) => (
-                            <div key={index} className="col-span-2 grid grid-cols-6 px-6 mx-6 shadow-md rounded-lg bg-fuchsia-200">
-                                <img src={item.objeto.imagenPrincipal} alt="fotoProducto" className="col-span-1 w-12 bg-white my-2 border-2 border-purple-300 justify-self-left" />
+            <div className="grid grid-cols-3 gap-6 mx-10 mt-6">
 
-                                <div class="col-start-2 col-span-3 place-self-center grid grid-rows-2">
-                                    <div className="grid-row-1 font-medium">
-                                        {item.objeto.name}
+                <div className="col-span-2">
+                    {cartApi || cartUnificado.productos ? ( 
+                        <div>
+                            {isAuthenticated && cartApi.productos ? (
+                                cartApi.productos.map((item, index) =>(
+                                    <div key={index} className="flex flex-col items-center justify-between p-4 rounded-lg bg-white shadow-sm mb-4">
+                                        <div className="flex items-center justify-between w-full">
+                                            <img src={item.imagenPrincipal} alt="fotoProducto" className="w-16 h-16 object-cover border-2 border-indigo-200 rounded-full" />
+                                            <div className="ml-4 w-40">
+                                                <div className="font-medium capitalize text-gray-800">{item.name}</div>
+                                                
+                                            </div>
+                                            <div className="w-20 text-right font-medium flex items-center justify-center">
+                                                <div className="mr-1">Cantidad:</div> 
+                                                <div>
+                                                    {item.cantidad}
+                                                </div>
+                                            </div>
+                                            <div className="w-32 text-right font-medium">
+                                                <div className="text-xs text-gray-500">Costo</div>
+                                                {item.precio_venta * item.cantidad}
+                                            </div>
+                                            <button
+                                                onClick={() => handleDeleteArtAPI(item)}
+                                                className="ml-6 rounded-md p-1.5 text-gray-400 bg-gray-200 hover:bg-gray-100"
+                                            >
+                                                X
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div className="grid-row-2 text-xs">
-                                        {item.color}
+                                ))
+                            ) : (
+                                cartUnificado.map((item, index) => (
+                                    <div key={index} className="flex flex-col items-center justify-between p-4 rounded-lg bg-white shadow-sm mb-4">
+                                        <div className="flex items-center justify-between w-full">
+                                            <img src={item.objeto.imagenPrincipal} alt="fotoProducto" className="w-16 h-16 object-cover border-2 border-indigo-200 rounded-full" />
+                                            <div className="ml-4 w-40">
+                                                <div className="font-medium capitalize text-gray-800">{item.objeto.name}</div>
+                                            </div>
+                                            <div className="w-20 text-right font-medium flex items-center justify-center">
+                                                <div className="mr-1">Cantidad:</div> 
+                                                <div>
+                                                    {item.cantidad}
+                                                </div>
+                                            </div>
+                                            <div className="w-32 text-right font-medium">
+                                                <div className="text-xs text-gray-500">Costo</div>
+                                                {item.objeto.precio_venta * item.cantidad}
+                                            </div>
+                                            <button
+                                                onClick={() => handleDeleteArtLS(item)}
+                                                className="ml-6 rounded-md p-1.5 text-gray-400 bg-gray-200 hover:bg-gray-100"
+                                            >
+                                                X
+                                            </button>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div className="col-start-5 col-span-1 flex items-center justify-center font-medium ">
-                                    <p class="text-xs mr-1">Cantidad: </p> {item.cantidad}
-                                </div>
-                                <div className="col-start-6 col-span-1 flex items-center justify-center font-medium ">
-                                    <p class="text-xs mr-1">Precio: </p>{item.objeto.precio_venta * item.cantidad}
-                                </div>
-                            </div>
-                        ))}
-                        <div class="col-start-2  flex justify-end h-6">
-                            <button onClick={handleEmptyCart} class="rounded-md mx-6 px-2 text-gray-400 bg-gray-200 hover:bg-gray-100 font-small">
-                                Limpiar Carrito
-                            </button>
+                                ))
+                            )}                                                                    
                         </div>
-                    </>
-                ) : (
-                    <div className="col-span-2 grid grid-cols-5 px-6 mx-6 shadow-md rounded-lg bg-fuchsia-200">
-                        <div className="col-start-2 col-span-3 flex items-center justify-center font-medium">
-                            No hay artículos en su carrito
+                    ) : (
+                        <div className="flex items-center justify-center p-4 rounded-lg bg-fuchsia-50">
+                            <div className="font-medium text-gray-600">No hay artículos en su carrito</div>
                         </div>
-                    </div>
-                )}
-
-
-                {/* columna derecha, total y boton a pasarela */}
-                <div class="col-start-3 row-start-1 row-end-4 px-6 mx-6 rounded-lg bg-purple-200">
-
-                    <div class="grid grid-cols-4 grid-rows-6 m-4">
-                        <h2 class="col-span-4 row-start-1 place-self-center font-medium">
-                            Resumen de Compra
-                        </h2>
-
-                        <h3 class="col-start-1 col-end-3 row-start-2 place-self-start">
-                            Arts. ({totalArts || 0})
-                        </h3>
-                        <h3 class="col-start-1 col-end-3 row-start-3 place-self-start">
-                            Envio
-                        </h3>
-
-                        <h2 class="col-start-1 col-end-3 row-start-5 place-self-start font-bold">
-                            Total
-                        </h2>
-
-                        <h2 class="col-start-4 row-start-2 place-self-start">
-                            {totalProd || 0}
-                        </h2>
-                        <h2 class="row-start-3 col-start-4  place-self-start">
-                            0
-                        </h2>
-                        <h2 class="row-start-5 col-start-4  place-self-start font-bold">
-                            {totalProd || 0}
-                        </h2>
-
-                        <button class="rounded-md row-start-6 place-self-center col-span-4 p-1.5 text-white bg-[#6b086f] hover:bg-[#7c4884]">
-                            Continuar compra
-                        </button>
-
-                    </div>
+                    )}
+                    {cartUnificado.length>0 && !isAuthenticated ?(
+                    <button onClick={() => handleEmptyCart()} className="ml-6 rounded-md p-1.5 text-gray-400 bg-gray-200 hover:bg-gray-100">
+                      Limpiar carrito
+                      </button>
+                    ) : null }
                 </div>
-                <div class="col-start-3 col-end-4 row-start-4 row-end-4 col-span-1 flex place-self-center">
-                    <NavLink to="/catalogo">
-                        <button class="rounded-md place-self-center p-1.5 text-white bg-[#6b086f] hover:bg-[#7c4884]"
+
+                <div className="col-span-1">
+                    <div className="p-6 bg-white rounded-lg shadow-lg">
+                        <h2 className="font-bold text-gray-800 mb-4">Resumen de Compra</h2>
+
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="text-gray-800 font-medium">Arts. ({totalArts || 0})</div>
+                            <div className="text-gray-800">{totalProd || 0}</div>
+                        </div>
+
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="text-gray-800 font-medium">Envio</div>
+                            <div className="text-gray-800">0</div>
+                        </div>
+
+                        <div className="flex items-center justify-between mb-4">
+                            <div className="font-bold text-gray-800">Total</div>
+                            <div className="font-bold text-gray-800">{totalProd || 0}</div>
+                        </div>
+
+                        <button
+                        onClick={() => {
+                            handleProceedToPayment();                         
+                        }}
+                        className="transition duration-300 rounded-md py-2 px-4 text-white font-medium w-full"
+                        style={{ backgroundColor: 'rgb(109, 1, 110)' }}
                         >
-                            Agregar articulos
-                        </button>
-                    </NavLink>
+                        Continuar compra
+                    </button>
+                    </div>
+
+                    <div className="mt-6 flex justify-center">
+                        <NavLink to="/catalogo">
+                            <button style={{ backgroundColor: 'rgb(109, 1, 110)' }} className="transition duration-300 rounded-md py-2 px-4 text-white font-medium w-full">
+                                Agregar articulos
+                            </button>
+                        </NavLink>
+                    </div>
                 </div>
             </div>
         </>
@@ -181,20 +286,4 @@ const Carrito = () => {
 
 };
 
-export default Carrito;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+export default Carrito; 

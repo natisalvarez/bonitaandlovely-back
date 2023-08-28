@@ -1,22 +1,54 @@
-const { Carrito } = require('../../db');
+const { Carrito, Producto, Color, Cliente } = require('../../db');
 
 module.exports = async () => {
-  try {
-    // Verificar si ya existe un carrito para el cliente
+  try {    
     const carritoExistente = await Carrito.findAll({
       where: {
-        pagado:true
+        pagado: true,
       },
     });
 
     if (!carritoExistente.length) {
-      throw new Error(`No existe un historial para el el cliente con ID ${clienteId}.`);
+      return (`No existe un historial`);
     }
 
-    carritoExistente.map(inventario => inventario.dataValues.id = `inv-${inventario.dataValues.id}`)
-    
+    const productos = [];
 
-    return carritoExistente;
+    for (const carrito of carritoExistente) {
+      const clienteId = carrito.clienteId; // Obtener el clienteId del carrito
+
+      const clienteDetalles = await Cliente.findByPk(clienteId, {
+        attributes: ['name'], // Ajusta esto según los campos de tu modelo Cliente
+      });
+
+      for (const producto of carrito.dataValues.productos) {
+        const productoDetalles = await Producto.findByPk(producto.productoId, {
+          attributes: ['name', 'precio_venta','descripcion', 'imagenPrincipal'],
+        });
+        const colorDetalles = await Color.findByPk(producto.colorId, {
+          attributes: ['name'],
+        });
+
+        if (productoDetalles) {
+          productos.push({
+            clienteId: clienteId,
+            clienteName: clienteDetalles.name, // Agregar el nombre del cliente
+            colorId: producto.colorId,
+            colorName: colorDetalles.name,
+            cantidad: producto.cantidad,
+            productoId: producto.productoId,
+            productoName: productoDetalles.name,
+            productoPrecio: productoDetalles.precio_venta,
+            descripcion:productoDetalles.descripcion,
+            imagenPrincipal:productoDetalles.imagenPrincipal,
+            inventarioId: producto.inventarioId,
+            fechaCompra: carrito.dataValues.fechaCompra,
+          });
+        }
+      }
+    }
+
+    return productos;
   } catch (error) {
     console.error('Error al ver registro en el carrito:', error.message);
     throw error;

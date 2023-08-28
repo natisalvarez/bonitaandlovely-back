@@ -42,10 +42,9 @@ router.get('/historialproducto/:clientesId', async (req, res) => {
   }
 });
 
-router.get('/Todohistorial/:clientesId', async (req, res) => {
-  const { clientesId } = req.params;
+router.get('/Todoelhistorial/:clientesId', async (req, res) => {
   try {
-    const carrito = await gettodoelhistorial(clientesId);
+    const carrito = await gettodoelhistorial();
     res.status(200).json(carrito);
   } catch (error) {
     res.status(500).json(error.message);

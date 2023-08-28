@@ -22,7 +22,7 @@ const server = require('./src/app');
 const { conn } = require('./src/db');
 const { PORT } = process.env;
 
-const postCategoriaArray = require ('./src/controllers/Categoria/postCategoriaArray');
+const postCategoriaArray = require ('./src/controllers/Categoria/postCategoriaArray')
 const categoriaData = require('./json/categorias.json');
 const postSubCategoriaArray = require('./src/controllers/SubCategoria/postSubCategoriaArray')
 const subCategoriaData = require('./json/subCategorias.json')
@@ -34,14 +34,14 @@ const postArrayProveedor = require('./src/controllers/Proveedor/postArrayProveed
 const ProveedorData = require('./json/Proveedores.json')
 const postArrayProducto = require('./src/controllers/Producto/postProductoArray');
 const ProductoData = require('./json/Producto.json')
-const postArrayClientes = require('./src/controllers/Cliente/postArrayClientes');
+const postArrayCliente = require('./src/controllers/Cliente/postArrayCliente');
 const ClienteData = require('./json/cliente.json')
 const postArrayFavorito = require('./src/controllers/Favoritos/postArrayFavorito')
 const FavoritoData = require('./json/Favoritos.json')
 const postColorArray = require('./src/controllers/Color/postColorArray')
 const ColorData = require('./json/color.json')
 const postArrayInventario = require('./src/controllers/Inventario/postArrayInventario')
-const InventarioData = require('./json/inventario.json');
+const InventarioData = require('./json/inventario.json')
 
 async function loadCategoriaData() {
   try {
@@ -66,7 +66,7 @@ async function loadCategoriaData() {
       await postArrayProducto(ProductoData);
       console.log('Producto data loaded.');
 
-      await postArrayClientes(ClienteData);
+      await postArrayCliente(ClienteData);
       console.log('Cliente data loaded.');
 
       await postArrayFavorito(FavoritoData);

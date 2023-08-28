@@ -1,4 +1,4 @@
-const { Carrito, Producto, Color, Cliente } = require('../../db');
+const { Carrito, Producto, Color, Cliente, Reviwers } = require('../../db');
 
 module.exports = async (clienteId) => {
   try {
@@ -21,7 +21,7 @@ module.exports = async (clienteId) => {
     });
 
     if (!carritoExistente.length) {
-      throw new Error(`No existe un historial para el cliente con ID ${clienteId}.`);
+      return(`No existe un historial para el cliente con ID ${clienteId}.`);
     }
 
     const clienteDetalles = await Cliente.findByPk(clienteId, {
@@ -33,22 +33,32 @@ module.exports = async (clienteId) => {
     for (const carrito of carritoExistente) {
       for (const producto of carrito.dataValues.productos) {
         const productoDetalles = await Producto.findByPk(producto.productoId, {
-          attributes: ['name', 'precio_venta'],
+          attributes: ['name', 'precio_venta', 'descripcion', 'imagenPrincipal'],
         });
         const colorDetalles = await Color.findByPk(producto.colorId, {
           attributes: ['name'],
         });
 
         if (productoDetalles) {
+          const reseñas = await Reviwers.findAll({
+            where: {
+              productoId: producto.productoId,
+              clienteId: clienteId
+            },
+          });
+
           productos.push({
             colorId: producto.colorId,
             colorName: colorDetalles.name,
+            imagenProducto: productoDetalles.imagenPrincipal,
+            descripcion: productoDetalles.descripcion,
             cantidad: producto.cantidad,
             productoId: producto.productoId,
             productoName: productoDetalles.name,
             productoPrecio: productoDetalles.precio_venta,
             inventarioId: producto.inventarioId,
             fechaCompra: carrito.dataValues.fechaCompra,
+            reseñas: reseñas
           });
         }
       }
@@ -59,7 +69,6 @@ module.exports = async (clienteId) => {
       clienteName: clienteDetalles.name,
       productos: productos
     }
-
 
     return historial;
   } catch (error) {

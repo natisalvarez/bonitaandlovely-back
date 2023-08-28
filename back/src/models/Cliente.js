@@ -55,6 +55,11 @@ module.exports = (sequelize) => {
   },
   { tableName: 'cliente',timestamps: false }
   );
-
+  Cliente.associate = (models) => {
+    // Asociación con el modelo Resena (relación de un cliente tiene muchas reseñas)
+    Cliente.hasMany(models.Reviwers, {
+      foreignKey: 'clienteId',
+    });
+  };
   return Cliente
 };

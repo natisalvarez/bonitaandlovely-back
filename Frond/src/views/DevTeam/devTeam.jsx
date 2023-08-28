@@ -158,35 +158,7 @@ const Reviews = () => {
     <Subtitle>Conoce al equipo encargado de desarrollar esta tienda online!</Subtitle>
     <ContainerTeam>
         
-    {/* Orli */}
-    <Card>
-
-<ButtonsDiv>
-<PinkButton>
-        <Code src={code} alt='icon'></Code>
-    </PinkButton>
-
-    <SocialsDiv>
-        <Link target='_blank' href='https://github.com/Orliluq/'>
-        <Github src={GithubLogo}></Github>
-        </Link>
-
-        <Link target='_blank' href='https://www.linkedin.com/in/iveth-gonzalez-98799895/'>
-        <Linkedin src={LinkedinLogo}></Linkedin>
-        </Link>
-
-        <Link target='_blank' href='https://www.linkedin.com/in/iveth-gonzalez-98799895/'>
-        <Gmail src={GmailLogo}></Gmail>
-        </Link>
-    </SocialsDiv>
-</ButtonsDiv>
-<DevImg src={Orli} alt='Paul-img'></DevImg>
-     
-      <DevContainer>
-          <AvatarImage src={imageLink} alt="user avatar" />
-          <CardTitle>Orli Dun</CardTitle>
-      </DevContainer>
-    </Card>
+    
 
     {/* Nat */}
     <Card>
@@ -307,66 +279,7 @@ const Reviews = () => {
       </DevContainer>
     </Card>
 
-    {/* Paul */}
-    <Card>
-
-<ButtonsDiv>
-<PinkButton>
-        <Code src={code} alt='icon'></Code>
-    </PinkButton>
-
-    <SocialsDiv>
-        <Link target='_blank' href='https://github.com/Paulgn1992'>
-        <Github src={GithubLogo}></Github>
-        </Link>
-
-        <Link target='_blank' href='https://www.linkedin.com/in/iveth-gonzalez-98799895/'>
-        <Linkedin src={LinkedinLogo}></Linkedin>
-        </Link>
-
-        <Link target='_blank' href='https://www.linkedin.com/in/iveth-gonzalez-98799895/'>
-        <Gmail src={GmailLogo}></Gmail>
-        </Link>
-    </SocialsDiv>
-</ButtonsDiv>
-<DevImg src={Paul} alt='Paul-img'></DevImg>
-     
-      <DevContainer>
-          <AvatarImage src={imageLink} alt="user avatar" />
-          <CardTitle>Paul Gamara</CardTitle>
-      </DevContainer>
-    </Card>
-
-    {/* Hector */}
-    <Card>
-
-<ButtonsDiv>
-    <PinkButton>
-        <Code src={code} alt='icon'></Code>
-    </PinkButton>
-
-    <SocialsDiv>
-        <Link target='_blank' href='https://github.com/hdgomez8'>
-        <Github src={GithubLogo}></Github>
-        </Link>
-
-        <Link target='_blank' href='https://www.linkedin.com/in/iveth-gonzalez-98799895/'>
-        <Linkedin src={LinkedinLogo}></Linkedin>
-        </Link>
-
-        <Link target='_blank' href='https://www.linkedin.com/in/iveth-gonzalez-98799895/'>
-        <Gmail src={GmailLogo}></Gmail>
-        </Link>
-    </SocialsDiv>
-</ButtonsDiv>
-<DevImg src={Hector} alt='Paul-img'></DevImg>
-     
-      <DevContainer>
-          <AvatarImage src={imageLink} alt="user avatar" />
-          <CardTitle>Hector Gomez</CardTitle>
-      </DevContainer>
-    </Card>
-
+ 
     {/* Daniel */}
     <Card>
 

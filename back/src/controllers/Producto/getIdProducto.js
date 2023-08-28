@@ -1,4 +1,5 @@
-const { Producto, Subcategoria } = require('../../db');
+const { Producto, Subcategoria, Inventario } = require('../../db');
+const getIdInventario = require('../Inventario/getIdInventario')
 
 module.exports = async (productoId) => {
   try {
@@ -32,8 +33,19 @@ module.exports = async (productoId) => {
       error.status = 404;
       throw error;
     }
-
+    const inventarios = await Inventario.findAll({
+      where: {
+        productoId: producto.dataValues.id,
+      },
+    });
+    let cantidad = 0;
+    inventarios.forEach((inventario) => {
+      cantidad += inventario.cantidad;
+    });
     producto.dataValues.id = `prod-${producto.dataValues.id}`;
+    producto.dataValues.cantidad= cantidad;
+
+
 
     return producto;
   } catch (error) {

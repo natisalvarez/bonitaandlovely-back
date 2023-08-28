@@ -1,13 +1,35 @@
+import axios from "axios";
 import React from "react";
 import StarRatings from 'react-star-ratings';
 
-export default function Modal() {
+export default function Modal({ productoId , currentUser}) {
     const [showModal, setShowModal] = React.useState(false);
     const [startCount, SetStartCount] = React.useState(0)
+    const [comentario, setComentario] = React.useState("");
 
     const onchangeStart = (rating) => {
         SetStartCount(rating)
     }
+    const handleComentarioChange = (event) => {
+        setComentario(event.target.value);
+    }
+
+    const handleSaveChanges = async () => {
+        try {
+            const response = await axios.post('http://localhost:3001/reviewr', {
+                // clienteId,
+                productoId,
+                rating: startCount,
+                comentario
+            });
+            console.log(response.data);
+
+            setShowModal(false);
+        } catch (error) {
+            console.error('Error al enviar la reseña:', error.message);
+        }
+    }
+
 
     return (
         <>
@@ -55,7 +77,15 @@ export default function Modal() {
                                 <div className="relative flex flex-col justify-items-center m-auto gap-2 text-center">
                                     <h3>Cuéntanos más acerca de tu producto</h3>
                                     <span className="text-zinc-400">(optional)</span>
-                                    <textarea name="" id="" cols="30" rows="10" className="resize-none h-24 border-solid border-2 border-slate-500 rounded	"></textarea>
+                                    <textarea
+                                        name="comentario"
+                                        id="comentario"
+                                        cols="30"
+                                        rows="10"
+                                        className="resize-none h-24 border-solid border-2 border-slate-500 rounded"
+                                        value={comentario}
+                                        onChange={handleComentarioChange}
+                                    ></textarea>
                                 </div>
                                 {/*footer*/}
                                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
@@ -69,7 +99,7 @@ export default function Modal() {
                                     <button
                                         className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                                         type="button"
-                                        onClick={() => setShowModal(false)}
+                                        onClick={() => handleSaveChanges()}
                                     >
                                         Save Changes
                                     </button>

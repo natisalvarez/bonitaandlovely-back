@@ -11,6 +11,7 @@ const clienteRouter = require('./clienteRouter')
 const favoritoRouter = require('./favoritoRouter')
 const inventarioRouter = require('./inventarioRouter')
 const carritoRouter = require('./carritoRouter')
+const reviewrRouter = require('./reviewrRouter')
 
 const router = Router();
 
@@ -27,7 +28,7 @@ router.use('/cliente',clienteRouter)
 router.use('/favorito',favoritoRouter)
 router.use('/inventario',inventarioRouter)
 router.use('/carrito',carritoRouter)
-
+router.use('/reviewr',reviewrRouter)
 
 
 module.exports = router;

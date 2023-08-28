@@ -1,38 +1,36 @@
 import axios from "axios";
-import { ALLBRANDS, ALLCATEGORIES, ALLCOLORS, ALLPRODUCTS, COPY_ALLPRODUCTS, ALLSIZES, ALLSUBCATEGORIES, CLEAN_DETAIL, PRODUCTS_DETAIL, PRODUCTS_FILTERED, POST_FAVORITES_API, POST_FAVORITES_API_INICIO, POST_FAVORITES_LS, DELETE_FAVORITES, DELETE_FAVORITES_API, PRODUCTOS, CART_PRODUCTS, ADD_TO_CART, GETPRODUCT_BYNAME, POST_CART_LS, DELETE_CART_LS, EMPTY_LOCAL_CART} from "./action-types";
+import { ALLBRANDS, ALLCATEGORIES, ALLCOLORS, ALLPRODUCTS, COPY_ALLPRODUCTS, ALLSIZES, ALLSUBCATEGORIES, CLEAN_DETAIL, PRODUCTS_DETAIL, PRODUCTS_FILTERED, POST_FAVORITES_API, POST_FAVORITES_API_INICIO, POST_FAVORITES_LS, DELETE_FAVORITES, DELETE_FAVORITES_API, PRODUCTOS, CART_PRODUCTS, ADD_TO_CART, GETPRODUCT_BYNAME, POST_CART_LS, DELETE_CART_LS, EMPTY_LOCAL_CART, DELETE_ART_LS, POST_CART_API, DEL_ART_API, GET_ALL_CLIENTS, GET_ALL_VENTAS, GET_USER_COMPRAS, GET_REVIEWRS, CLEAN_PREVIEW, POST_ART_API, GET_NAME} from "./action-types";
 
 // aca la ruta directamente porque la url base ya esta osea que solo queda por la ruta ejemplo:/producto
 
 //action que trae la data
 export const products = ({ page, size }) => async (dispatch) => {
-    const { data } = await axios.get("/producto", {
-      params: {
-        page,
-        size,
-      },
-    });
-    dispatch({
-      type: ALLPRODUCTS,
-      payload: data,
-    });
-
-};
-// esta accion es provisional, solo para llamar a 50 productos
-
-export const productsCopy = () => async (dispatch) => {
   const { data } = await axios.get("/producto", {
     params: {
-      page: 0,
-      size: 50,
+      page,
+      size,
     },
   });
   dispatch({
-    type: COPY_ALLPRODUCTS,
+    type: ALLPRODUCTS,
     payload: data,
   });
-
 };
 
+export const productsCopy = (page, size ,filters) => async (dispatch) => {
+const {data} = await axios.get('/producto', {
+  params: {
+    page,
+    size,
+    ...filters
+  },
+});
+
+dispatch({
+  type:COPY_ALLPRODUCTS,
+  payload: data
+})
+};
 export const productosSinPag = () => async (dispatch) =>{
   const { data } = await axios.get("/producto");
   dispatch({
@@ -40,6 +38,28 @@ export const productosSinPag = () => async (dispatch) =>{
     payload: data,
   });
 }
+export const clientes = () => async dispatch => {
+  const {data} =await axios.get("/cliente")
+  dispatch({
+     type: GET_ALL_CLIENTS,
+     payload: data
+  })
+ };
+ export const ventas = () => async dispatch => {
+  const {data} =await axios.get("/carrito/Todoelhistorial/0")
+  dispatch({
+     type: GET_ALL_VENTAS,
+     payload: data
+  })
+ };
+ export const userCompras = (id) => async dispatch => {
+  const {data} =await axios.get(`/carrito/historialproducto/${id}`)
+  dispatch({
+     type: GET_USER_COMPRAS,
+     payload: data
+  })
+ };
+
 
 export const categories = () => async dispatch => {
    const {data} =await axios.get("/categoria")
@@ -204,13 +224,12 @@ export const categories = () => async dispatch => {
       }
     }}
 
-  export const addToCartFunction = (id, amount,color) => {
+  export const addToCartFunction = (id, amount) => {
     return {
       type: ADD_TO_CART,
       payload: {
         id,
-        amount,
-        color
+        amount        
       },
     };
   };
@@ -250,3 +269,113 @@ export const categories = () => async dispatch => {
     }
   }
   
+  export const deleteArtLS = (ArtId, cantidad, ArtColor) => {
+    console.log(`actions -> id:${ArtId}, cantidad:${cantidad}`);
+    return{
+    type: DELETE_ART_LS,
+    payload: {ArtId, cantidad, ArtColor}
+    }
+  }
+
+  const extractNumber = (string) => {
+    const stringInput = String(string);
+    const match = stringInput.match(/\d+/); 
+    return match ? parseInt(match[0]) : 0; 
+  };
+
+  export const addCartLSToApi = ({ user, localCart }) => { 
+    try {
+      return async (dispatch) => {
+        console.log("este es user en actions", user);
+        const cartData = {
+          productos: localCart.map((item) => ({
+            productoId: extractNumber(item.id),
+            colorId: item.color,
+            cantidad: item.amount,
+          })),
+        };  
+        await axios.put(`/carrito/${user}`, cartData);  
+        const { data } = await axios.get(`/carrito/${user}`);
+        return dispatch({
+          type: POST_CART_API,
+          payload: cartData,
+          data: data,
+        });
+      };
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  export const deleteArtAPI = ({ user, productoId, colorId }) => { 
+    try {
+      return async (dispatch, getState) => {
+        const itemData = {
+          productoId: productoId,
+          colorId: colorId
+        };  
+        await axios.delete(`/carrito/${user}`, { data: itemData });          
+        const response = await axios.get(`/carrito/${user}`);
+        const updatedApiCart = response.data;
+        dispatch({
+          type: DEL_ART_API,
+          payload: itemData,
+          data: updatedApiCart,
+        });
+      };
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  export const addItemToCartApi = ({ userId, productoId, cantidad, colorId}) => {
+    return async (dispatch)=>{
+    try {                   
+      const cartData = {
+        productos: [
+          {
+            productoId: extractNumber(productoId),            
+            cantidad: cantidad,
+            colorId: colorId
+          },
+        ],
+      };
+      await axios.put(`/carrito/${userId}`, cartData);
+      const { data } = await axios.get(`/carrito/${userId}`); 
+      return (dispatch) => {
+        dispatch({
+          type: POST_ART_API,
+          payload: cartData,
+          data: data,
+        });
+      };
+    } catch (error) {
+      console.error("Error en la solicitud:", error);
+      throw error;
+    }}
+  };
+  
+
+  
+export const previewrsId = (id) => async (dispatch) => {
+  const {data} = await axios.get(`reviewr/${id}`)
+  dispatch({
+    type:GET_REVIEWRS,
+    payload:data
+  })
+}
+
+ 
+export const cleanPreview = () => {
+  return {
+    type: CLEAN_PREVIEW
+  };
+ }
+
+export const nameFilter = (name) => (dispatch)  =>  {
+  dispatch({
+    type:GET_NAME,
+    payload:name 
+
+  })
+}
